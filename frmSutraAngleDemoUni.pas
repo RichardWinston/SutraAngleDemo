@@ -4,9 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, GLScene, GLObjects, GLMisc, GLWin32Viewer, StdCtrls, Spin,
+  Dialogs, GLScene, GLObjects, {GLMisc,} GLWin32Viewer, StdCtrls, Spin,
   ExtCtrls, AsyncTimer, GLGeomObjects, GLGui, GLWindows, GLAVIRecorder,
-  ArgusDataEntry, JvExControls, JvComponent, JvSpeedButton, OpenGL1x;
+  ArgusDataEntry, JvExControls, JvComponent, JvSpeedButton, OpenGL1x,
+  GLCoordinates, GLCrossPlatform, GLBaseClasses, GLAsyncTimer;
 
 type
   TfrmSutraAngleDemo = class(TForm)
@@ -22,7 +23,7 @@ type
     seAngle2: TSpinEdit;
     Label3: TLabel;
     seAngle3: TSpinEdit;
-    AsyncTimer1: TAsyncTimer;
+    AsyncTimer1: TGLAsyncTimer;
     btnAnimate: TButton;
     GLArrowLine1: TGLArrowLine;
     GLArrowLine2: TGLArrowLine;
@@ -35,7 +36,7 @@ type
     adeY: TArgusDataEntry;
     Label7: TLabel;
     adeZ: TArgusDataEntry;
-    arSutraAngle: TAVIRecorder;
+    arSutraAngle: TGLAVIRecorder;
     sbtnRecord: TJvSpeedButton;
     procedure seAngle1Change(Sender: TObject);
     procedure btnAnimateClick(Sender: TObject);
@@ -66,7 +67,7 @@ var
 
 implementation
 
-uses VectorGeometry;
+uses GLVectorGeometry;
 
 {$R *.dfm}
 
@@ -78,12 +79,12 @@ begin
   Angle1 := 0;
   Angle2 := 0;
   Angle3 := 0;
-  Up[0] := 0;
-  Up[1] := 1;
-  Up[2] := 0;
-  Direction[0] := 0;
-  Direction[1] := 0;
-  Direction[2] := 1;
+  Up.V[0] := 0;
+  Up.V[1] := 1;
+  Up.V[2] := 0;
+  Direction.V[0] := 0;
+  Direction.V[1] := 0;
+  Direction.V[2] := 1;
   GLDummyCube1.Up.AsAffineVector := Up;
   GLDummyCube1.Direction.AsAffineVector := Direction;
 end;
@@ -204,7 +205,7 @@ end;
 procedure TfrmSutraAngleDemo.SetAngle3(const Value: integer);
 begin
   FAngle3 := Value;
-  GLDummyCube1.PitchAngle := FAngle3;
+  GLDummyCube1.PitchAngle := -FAngle3;
 end;
 
 procedure TfrmSutraAngleDemo.adeXChange(Sender: TObject);

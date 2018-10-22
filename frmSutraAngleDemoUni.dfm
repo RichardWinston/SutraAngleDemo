@@ -1,9 +1,9 @@
 object frmSutraAngleDemo: TfrmSutraAngleDemo
   Left = 331
   Top = 248
-  Width = 724
-  Height = 576
   Caption = 'Illustration of Permeability Angles in SUTRA'
+  ClientHeight = 537
+  ClientWidth = 708
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -16,19 +16,20 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
   object GLSceneViewer1: TGLSceneViewer
     Left = 185
     Top = 0
-    Width = 531
-    Height = 542
+    Width = 523
+    Height = 537
     Camera = GLCamera1
     Buffer.BackgroundColor = clWhite
     Buffer.AmbientColor.Color = {9A99193F9A99193F9A99193F0000803F}
-    FieldOfView = 158.669494628906200000
+    FieldOfView = 158.350875854492200000
     Align = alClient
+    TabOrder = 0
   end
   object Panel1: TPanel
     Left = 0
     Top = 0
     Width = 185
-    Height = 542
+    Height = 537
     Align = alLeft
     TabOrder = 1
     object Label1: TLabel
@@ -55,7 +56,7 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
     object Label4: TLabel
       Left = 16
       Top = 512
-      Width = 80
+      Width = 79
       Height = 18
       Caption = 'Version 1.4'
     end
@@ -118,11 +119,6 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
         FF00FFAF4501AF4501DC8840E9A76CEEBB89EBB581DC914DBD590F5D23155D23
         15FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFA34103A54507A6
         46089E40068B3505752D0CFF00FFFF00FFFF00FFFF00FFFF00FF}
-      HotTrackFont.Charset = ANSI_CHARSET
-      HotTrackFont.Color = clWindowText
-      HotTrackFont.Height = -16
-      HotTrackFont.Name = 'Arial'
-      HotTrackFont.Style = []
       Layout = blGlyphLeft
       OnClick = sbtnRecordClick
     end
@@ -173,7 +169,6 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
       Top = 248
       Width = 145
       Height = 22
-      ItemHeight = 18
       TabOrder = 4
       Text = '2'
       OnChange = adeXChange
@@ -186,7 +181,6 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
       Top = 328
       Width = 145
       Height = 22
-      ItemHeight = 18
       TabOrder = 5
       Text = '1'
       OnChange = adeYChange
@@ -199,7 +193,6 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
       Top = 400
       Width = 145
       Height = 22
-      ItemHeight = 18
       TabOrder = 6
       Text = '0.5'
       OnChange = adeZChange
@@ -238,9 +231,8 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
         BottomArrowHeadRadius = 0.200000002980232200
       end
       object GLArrowLine3: TGLArrowLine
-        Direction.Coordinates = {00000000000080BF0000000000000000}
-        Position.Coordinates = {0000000000000000000080BF0000803F}
-        Up.Coordinates = {0000000000000000000080BF00000000}
+        Direction.Coordinates = {0000000000000000000080BF00000000}
+        Position.Coordinates = {00000000000080BF000000000000803F}
         Visible = False
         BottomRadius = 0.100000001490116100
         Height = 1.000000000000000000
@@ -270,14 +262,13 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
       Position.Coordinates = {00000000000040C0000080BF0000803F}
     end
   end
-  object AsyncTimer1: TAsyncTimer
+  object AsyncTimer1: TGLAsyncTimer
     Interval = 100
     OnTimer = AsyncTimer1Timer
-    ThreadPriority = tpNormal
     Left = 304
     Top = 24
   end
-  object arSutraAngle: TAVIRecorder
+  object arSutraAngle: TGLAVIRecorder
     GLSceneViewer = GLSceneViewer1
     Width = 320
     Height = 200
