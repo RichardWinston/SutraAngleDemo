@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, GLScene, GLObjects, {GLMisc,} GLWin32Viewer, StdCtrls, Spin,
-  ExtCtrls, AsyncTimer, GLGeomObjects, GLGui, GLWindows, GLAVIRecorder,
+  ExtCtrls, {AsyncTimer,} GLGeomObjects, GLGui, GLWindows, GLAVIRecorder,
   ArgusDataEntry, JvExControls, JvComponent, JvSpeedButton, OpenGL1x,
   GLCoordinates, GLCrossPlatform, GLBaseClasses, GLAsyncTimer;
 
