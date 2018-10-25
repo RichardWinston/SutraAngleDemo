@@ -38,6 +38,9 @@ type
     adeZ: TArgusDataEntry;
     arSutraAngle: TGLAVIRecorder;
     sbtnRecord: TJvSpeedButton;
+    glcylndrAxis1: TGLCylinder;
+    glcylndrAxis2: TGLCylinder;
+    glcylndrAxis3: TGLCylinder;
     procedure seAngle1Change(Sender: TObject);
     procedure btnAnimateClick(Sender: TObject);
     procedure AsyncTimer1Timer(Sender: TObject);

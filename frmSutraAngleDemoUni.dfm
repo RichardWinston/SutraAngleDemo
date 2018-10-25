@@ -1,7 +1,7 @@
 object frmSutraAngleDemo: TfrmSutraAngleDemo
   Left = 331
   Top = 248
-  Caption = 'Illustration of Permeability Angles in SUTRA'
+  Caption = 'Illustration of Hydraulic Conductivity Angles in XT3D'
   ClientHeight = 537
   ClientWidth = 708
   Color = clBtnFace
@@ -58,7 +58,7 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
       Top = 512
       Width = 79
       Height = 18
-      Caption = 'Version 1.4'
+      Caption = 'Version 1.5'
     end
     object Label5: TLabel
       Left = 8
@@ -211,6 +211,21 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
     end
     object GLDummyCube1: TGLDummyCube
       CubeSize = 1.000000000000000000
+      object glcylndrAxis1: TGLCylinder
+        Material.BackProperties.Ambient.Color = {0000803F00000000000000000000803F}
+        Material.BackProperties.Diffuse.Color = {0000803F00000000000000000000803F}
+        Material.BackProperties.Emission.Color = {0000803F00000000000000000000803F}
+        Material.BackProperties.Specular.Color = {0000803F00000000000000000000803F}
+        Material.FrontProperties.Ambient.Color = {0000803F00000000000000000000803F}
+        Material.FrontProperties.Diffuse.Color = {0000803F00000000000000000000803F}
+        Material.FrontProperties.Emission.Color = {CDCC4C3DCDCC4C3DCDCC4C3D0000803F}
+        RollAngle = 90.000000000000000000
+        Scale.Coordinates = {0000803F000020400000803F00000000}
+        Up.Coordinates = {000080BF2EBD3BB30000000000000000}
+        BottomRadius = 0.029999999329447750
+        Height = 1.000000000000000000
+        TopRadius = 0.029999999329447750
+      end
       object GLSphere1: TGLSphere
         Material.FrontProperties.Ambient.Color = {CDCC0C3FD7A3F03E295C0F3E0000803F}
         Material.FrontProperties.Diffuse.Color = {EC51383F6666E63ECDCC4C3E0000803F}
@@ -253,6 +268,27 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
         TopArrowHeadRadius = 0.200000002980232200
         BottomArrowHeadHeight = 0.500000000000000000
         BottomArrowHeadRadius = 0.200000002980232200
+      end
+      object glcylndrAxis2: TGLCylinder
+        Material.FrontProperties.Ambient.Color = {000000000000003F000000000000803F}
+        Material.FrontProperties.Diffuse.Color = {000000000000003F000000000000803F}
+        Material.FrontProperties.Emission.Color = {CDCC4C3DCDCC4C3DCDCC4C3D0000803F}
+        Direction.Coordinates = {000000000000803F2EBD3BB300000000}
+        PitchAngle = 90.000000000000000000
+        Scale.Coordinates = {0000803F000000400000803F00000000}
+        Up.Coordinates = {000000002EBD3BB3000080BF00000000}
+        BottomRadius = 0.029999999329447750
+        Height = 1.000000000000000000
+        TopRadius = 0.029999999329447750
+      end
+      object glcylndrAxis3: TGLCylinder
+        Material.FrontProperties.Ambient.Color = {00000000000000000000803F0000803F}
+        Material.FrontProperties.Diffuse.Color = {00000000000000000000803F0000803F}
+        Material.FrontProperties.Emission.Color = {CDCC4C3DCDCC4C3DCDCC4C3D0000803F}
+        Scale.Coordinates = {0000803F000020400000803F00000000}
+        BottomRadius = 0.029999999329447750
+        Height = 1.000000000000000000
+        TopRadius = 0.029999999329447750
       end
     end
     object GLCamera1: TGLCamera
