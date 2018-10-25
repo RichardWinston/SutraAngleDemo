@@ -220,7 +220,7 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
         Material.FrontProperties.Diffuse.Color = {0000803F00000000000000000000803F}
         Material.FrontProperties.Emission.Color = {CDCC4C3DCDCC4C3DCDCC4C3D0000803F}
         RollAngle = 90.000000000000000000
-        Scale.Coordinates = {0000803F000020400000803F00000000}
+        Scale.Coordinates = {0000803F000040400000803F00000000}
         Up.Coordinates = {000080BF2EBD3BB30000000000000000}
         BottomRadius = 0.029999999329447750
         Height = 1.000000000000000000
@@ -289,6 +289,170 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
         BottomRadius = 0.029999999329447750
         Height = 1.000000000000000000
         TopRadius = 0.029999999329447750
+      end
+      object glRotationSolidCurvedArrow1: TGLRevolutionSolid
+        Direction.Coordinates = {F304353FF30435BF0000000000000000}
+        TurnAngle = 135.000000000000000000
+        Up.Coordinates = {0000000000000000000080BF00000000}
+        Visible = False
+        Nodes = <
+          item
+            X = 1.500000000000000000
+            Y = 0.100000001490116100
+          end
+          item
+            X = 1.570700049400330000
+            Y = 0.070699997246265410
+          end
+          item
+            X = 1.600000023841858000
+          end
+          item
+            X = 1.570999979972839000
+            Y = -0.071000002324581150
+          end
+          item
+            X = 1.500000000000000000
+            Y = -0.100000001490116100
+          end
+          item
+            X = 1.429000020027161000
+            Y = -0.071000002324581150
+          end
+          item
+            X = 1.399999976158142000
+          end
+          item
+            X = 1.429000020027161000
+            Y = 0.071000002324581150
+          end
+          item
+            X = 1.500000000000000000
+            Y = 0.100000001490116100
+          end>
+        Parts = [rspOutside, rspInside, rspStartPolygon, rspStopPolygon]
+        StartAngle = 22.500000000000000000
+        StopAngle = 90.000000000000000000
+        Slices = 64
+        Normals = nsSmooth
+        object glConeArrowhead1: TGLCone
+          Position.Coordinates = {CDCC4CBE000000000000C0BF0000803F}
+          RollAngle = 90.000000000000000000
+          Scale.Coordinates = {0000003F0000003F0000003F00000000}
+          Up.Coordinates = {000080BF2EBD3BB30000000000000000}
+          BottomRadius = 0.500000000000000000
+          Height = 1.000000000000000000
+        end
+      end
+      object glRotationSolidCurvedArrow2: TGLRevolutionSolid
+        Direction.Coordinates = {7AA3503F000000001058143F00000000}
+        RollAngle = -90.000000000000000000
+        TurnAngle = 135.000000000000000000
+        Up.Coordinates = {00000000000080BF0000000000000000}
+        Visible = False
+        Nodes = <
+          item
+            X = 1.500000000000000000
+            Y = 0.100000001490116100
+          end
+          item
+            X = 1.570700049400330000
+            Y = 0.070699997246265410
+          end
+          item
+            X = 1.600000023841858000
+          end
+          item
+            X = 1.570999979972839000
+            Y = -0.071000002324581150
+          end
+          item
+            X = 1.500000000000000000
+            Y = -0.100000001490116100
+          end
+          item
+            X = 1.429000020027161000
+            Y = -0.071000002324581150
+          end
+          item
+            X = 1.399999976158142000
+          end
+          item
+            X = 1.429000020027161000
+            Y = 0.071000002324581150
+          end
+          item
+            X = 1.500000000000000000
+            Y = 0.100000001490116100
+          end>
+        Parts = [rspOutside, rspInside, rspStartPolygon, rspStopPolygon]
+        StartAngle = 22.500000000000000000
+        StopAngle = 90.000000000000000000
+        Slices = 64
+        Normals = nsSmooth
+        object glConeArrowhead2: TGLCone
+          Position.Coordinates = {CDCC4CBE000000000000C0BF0000803F}
+          RollAngle = 90.000000000000000000
+          Scale.Coordinates = {0000003F0000003F0000003F00000000}
+          Up.Coordinates = {000080BF2EBD3BB30000000000000000}
+          BottomRadius = 0.500000000000000000
+          Height = 1.000000000000000000
+        end
+      end
+      object glRotationSolidCurvedArrow3: TGLRevolutionSolid
+        Direction.Coordinates = {000000005C1C7C3FD8D0313E00000000}
+        PitchAngle = 90.000000000000000000
+        Scale.Coordinates = {3333333F3333333F3333333F00000000}
+        TurnAngle = 100.000000000000000000
+        Up.Coordinates = {0000803F000000000000000000000000}
+        Nodes = <
+          item
+            X = 1.500000000000000000
+            Y = 0.100000001490116100
+          end
+          item
+            X = 1.570700049400330000
+            Y = 0.070699997246265410
+          end
+          item
+            X = 1.600000023841858000
+          end
+          item
+            X = 1.570999979972839000
+            Y = -0.071000002324581150
+          end
+          item
+            X = 1.500000000000000000
+            Y = -0.100000001490116100
+          end
+          item
+            X = 1.429000020027161000
+            Y = -0.071000002324581150
+          end
+          item
+            X = 1.399999976158142000
+          end
+          item
+            X = 1.429000020027161000
+            Y = 0.071000002324581150
+          end
+          item
+            X = 1.500000000000000000
+            Y = 0.100000001490116100
+          end>
+        Parts = [rspOutside, rspInside, rspStartPolygon, rspStopPolygon]
+        StartAngle = 22.500000000000000000
+        StopAngle = 90.000000000000000000
+        Slices = 64
+        Normals = nsSmooth
+        object glConeArrowhead3: TGLCone
+          Position.Coordinates = {CDCC4CBE000000000000C0BF0000803F}
+          RollAngle = 90.000000000000000000
+          Scale.Coordinates = {0000003F0000003F0000003F00000000}
+          Up.Coordinates = {000080BF2EBD3BB30000000000000000}
+          BottomRadius = 0.500000000000000000
+          Height = 1.000000000000000000
+        end
       end
     end
     object GLCamera1: TGLCamera

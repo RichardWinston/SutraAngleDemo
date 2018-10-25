@@ -7,7 +7,7 @@ uses
   Dialogs, GLScene, GLObjects, {GLMisc,} GLWin32Viewer, StdCtrls, Spin,
   ExtCtrls, {AsyncTimer,} GLGeomObjects, GLGui, GLWindows, GLAVIRecorder,
   ArgusDataEntry, JvExControls, JvComponent, JvSpeedButton, OpenGL1x,
-  GLCoordinates, GLCrossPlatform, GLBaseClasses, GLAsyncTimer;
+  GLCoordinates, GLCrossPlatform, GLBaseClasses, GLAsyncTimer, GLExtrusion;
 
 type
   TfrmSutraAngleDemo = class(TForm)
@@ -41,6 +41,12 @@ type
     glcylndrAxis1: TGLCylinder;
     glcylndrAxis2: TGLCylinder;
     glcylndrAxis3: TGLCylinder;
+    glRotationSolidCurvedArrow1: TGLRevolutionSolid;
+    glConeArrowhead1: TGLCone;
+    glRotationSolidCurvedArrow2: TGLRevolutionSolid;
+    glConeArrowhead2: TGLCone;
+    glRotationSolidCurvedArrow3: TGLRevolutionSolid;
+    glConeArrowhead3: TGLCone;
     procedure seAngle1Change(Sender: TObject);
     procedure btnAnimateClick(Sender: TObject);
     procedure AsyncTimer1Timer(Sender: TObject);
@@ -101,30 +107,30 @@ begin
 
   if Sender = seAngle1 then
   begin
-    GLArrowLine1.Visible := True;
-    GLArrowLine2.Visible := False;
-    GLArrowLine3.Visible := False;
+    glRotationSolidCurvedArrow1.Visible := True;
+    glRotationSolidCurvedArrow2.Visible := False;
+    glRotationSolidCurvedArrow3.Visible := False;
   end
   else if Sender = seAngle2 then
   begin
-    GLArrowLine1.Visible := False;
-    GLArrowLine2.Visible := True;
-    GLArrowLine3.Visible := False;
+    glRotationSolidCurvedArrow1.Visible := False;
+    glRotationSolidCurvedArrow2.Visible := True;
+    glRotationSolidCurvedArrow3.Visible := False;
   end
   else
   begin
-    GLArrowLine1.Visible := False;
-    GLArrowLine2.Visible := False;
-    GLArrowLine3.Visible := True;
+    glRotationSolidCurvedArrow1.Visible := False;
+    glRotationSolidCurvedArrow2.Visible := False;
+    glRotationSolidCurvedArrow3.Visible := True;
   end;
 
 end;
 
 procedure TfrmSutraAngleDemo.btnAnimateClick(Sender: TObject);
 begin
-  GLArrowLine1.Visible := False;
-  GLArrowLine2.Visible := False;
-  GLArrowLine3.Visible := False;
+  glRotationSolidCurvedArrow1.Visible := False;
+  glRotationSolidCurvedArrow2.Visible := False;
+  glRotationSolidCurvedArrow3.Visible := False;
   Restore;
   AsyncTimer1.Enabled := True;
 end;
@@ -133,9 +139,9 @@ procedure TfrmSutraAngleDemo.AsyncTimer1Timer(Sender: TObject);
 begin
   if Angle1 <> seAngle1.Value then
   begin
-    GLArrowLine1.Visible := True;
-    GLArrowLine2.Visible := False;
-    GLArrowLine3.Visible := False;
+    glRotationSolidCurvedArrow1.Visible := True;
+    glRotationSolidCurvedArrow2.Visible := False;
+    glRotationSolidCurvedArrow3.Visible := False;
     if seAngle1.Value > Angle1 then
     begin
       Angle1 := Angle1 + 1;
@@ -147,9 +153,9 @@ begin
   end
   else if Angle2 <> seAngle2.Value then
   begin
-    GLArrowLine1.Visible := False;
-    GLArrowLine2.Visible := True;
-    GLArrowLine3.Visible := False;
+    glRotationSolidCurvedArrow1.Visible := False;
+    glRotationSolidCurvedArrow2.Visible := True;
+    glRotationSolidCurvedArrow3.Visible := False;
     if seAngle2.Value > Angle2 then
     begin
       Angle2 := Angle2 + 1;
@@ -161,9 +167,9 @@ begin
   end
   else if Angle3 <> seAngle3.Value then
   begin
-    GLArrowLine1.Visible := False;
-    GLArrowLine2.Visible := False;
-    GLArrowLine3.Visible := True;
+    glRotationSolidCurvedArrow1.Visible := False;
+    glRotationSolidCurvedArrow2.Visible := False;
+    glRotationSolidCurvedArrow3.Visible := True;
     if seAngle3.Value > Angle3 then
     begin
       Angle3 := Angle3 + 1;
@@ -175,9 +181,9 @@ begin
   end
   else
   begin
-    GLArrowLine1.Visible := False;
-    GLArrowLine2.Visible := False;
-    GLArrowLine3.Visible := False;
+    glRotationSolidCurvedArrow1.Visible := False;
+    glRotationSolidCurvedArrow2.Visible := False;
+    glRotationSolidCurvedArrow3.Visible := False;
     AsyncTimer1.Enabled := False;
   end;
 
