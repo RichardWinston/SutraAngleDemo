@@ -2,8 +2,8 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
   Left = 331
   Top = 248
   Caption = 'Illustration of Hydraulic Conductivity Angles in XT3D'
-  ClientHeight = 537
-  ClientWidth = 708
+  ClientHeight = 467
+  ClientWidth = 593
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -16,22 +16,25 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
   object GLSceneViewer1: TGLSceneViewer
     Left = 185
     Top = 0
-    Width = 523
-    Height = 537
+    Width = 408
+    Height = 467
     Camera = GLCamera1
     Buffer.BackgroundColor = clWhite
     Buffer.AmbientColor.Color = {9A99193F9A99193F9A99193F0000803F}
-    FieldOfView = 158.350875854492200000
+    FieldOfView = 152.456802368164100000
     Align = alClient
     TabOrder = 0
+    ExplicitWidth = 523
+    ExplicitHeight = 537
   end
   object Panel1: TPanel
     Left = 0
     Top = 0
     Width = 185
-    Height = 537
+    Height = 467
     Align = alLeft
     TabOrder = 1
+    ExplicitHeight = 537
     object Label1: TLabel
       Left = 8
       Top = 8
@@ -41,28 +44,28 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
     end
     object Label2: TLabel
       Left = 8
-      Top = 72
+      Top = 66
       Width = 53
       Height = 18
       Caption = 'Angle 2'
     end
     object Label3: TLabel
       Left = 8
-      Top = 136
+      Top = 120
       Width = 53
       Height = 18
       Caption = 'Angle 3'
     end
     object Label4: TLabel
-      Left = 16
-      Top = 512
+      Left = 8
+      Top = 440
       Width = 79
       Height = 18
       Caption = 'Version 1.5'
     end
     object Label5: TLabel
       Left = 8
-      Top = 208
+      Top = 176
       Width = 93
       Height = 36
       Caption = 'Relative Max Permeability'
@@ -70,7 +73,7 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
     end
     object Label6: TLabel
       Left = 8
-      Top = 288
+      Top = 240
       Width = 90
       Height = 36
       Caption = 'Relative Mid Permeability'
@@ -78,7 +81,7 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
     end
     object Label7: TLabel
       Left = 8
-      Top = 360
+      Top = 308
       Width = 89
       Height = 36
       Caption = 'Relative Min Permeability'
@@ -86,7 +89,7 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
     end
     object sbtnRecord: TJvSpeedButton
       Left = 8
-      Top = 472
+      Top = 409
       Width = 89
       Height = 25
       AllowAllUp = True
@@ -135,7 +138,7 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
     end
     object seAngle2: TSpinEdit
       Left = 8
-      Top = 96
+      Top = 90
       Width = 121
       Height = 28
       MaxValue = 90
@@ -146,7 +149,7 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
     end
     object seAngle3: TSpinEdit
       Left = 8
-      Top = 160
+      Top = 144
       Width = 121
       Height = 28
       MaxValue = 180
@@ -157,7 +160,7 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
     end
     object btnAnimate: TButton
       Left = 8
-      Top = 440
+      Top = 378
       Width = 89
       Height = 25
       Caption = 'Animate'
@@ -166,7 +169,7 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
     end
     object adeX: TArgusDataEntry
       Left = 8
-      Top = 248
+      Top = 216
       Width = 145
       Height = 22
       TabOrder = 4
@@ -178,7 +181,7 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
     end
     object adeY: TArgusDataEntry
       Left = 8
-      Top = 328
+      Top = 280
       Width = 145
       Height = 22
       TabOrder = 5
@@ -190,11 +193,11 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
     end
     object adeZ: TArgusDataEntry
       Left = 8
-      Top = 400
+      Top = 350
       Width = 145
       Height = 22
       TabOrder = 6
-      Text = '0.5'
+      Text = '0.3'
       OnChange = adeZChange
       DataType = dtReal
       Max = 1.000000000000000000
@@ -204,21 +207,16 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
   object GLScene1: TGLScene
     Left = 264
     Top = 24
-    object GLLightSource1: TGLLightSource
-      ConstAttenuation = 1.000000000000000000
-      Position.Coordinates = {00000000000040C0000000C00000803F}
-      SpotCutOff = 180.000000000000000000
-    end
     object GLDummyCube1: TGLDummyCube
       CubeSize = 1.000000000000000000
+      object GLLightSource1: TGLLightSource
+        ConstAttenuation = 1.000000000000000000
+        Position.Coordinates = {00000000000040C0000080C00000803F}
+        SpotCutOff = 180.000000000000000000
+      end
       object glcylndrAxis1: TGLCylinder
-        Material.BackProperties.Ambient.Color = {0000803F00000000000000000000803F}
-        Material.BackProperties.Diffuse.Color = {0000803F00000000000000000000803F}
-        Material.BackProperties.Emission.Color = {0000803F00000000000000000000803F}
-        Material.BackProperties.Specular.Color = {0000803F00000000000000000000803F}
         Material.FrontProperties.Ambient.Color = {0000803F00000000000000000000803F}
         Material.FrontProperties.Diffuse.Color = {0000803F00000000000000000000803F}
-        Material.FrontProperties.Emission.Color = {CDCC4C3DCDCC4C3DCDCC4C3D0000803F}
         RollAngle = 90.000000000000000000
         Scale.Coordinates = {0000803F000040400000803F00000000}
         Up.Coordinates = {000080BF2EBD3BB30000000000000000}
@@ -229,7 +227,7 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
       object GLSphere1: TGLSphere
         Material.FrontProperties.Ambient.Color = {CDCC0C3FD7A3F03E295C0F3E0000803F}
         Material.FrontProperties.Diffuse.Color = {EC51383F6666E63ECDCC4C3E0000803F}
-        Scale.Coordinates = {000000400000803F0000003F00000000}
+        Scale.Coordinates = {000000400000803F9A99993E00000000}
         Radius = 0.500000000000000000
       end
       object GLArrowLine1: TGLArrowLine
@@ -272,7 +270,6 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
       object glcylndrAxis2: TGLCylinder
         Material.FrontProperties.Ambient.Color = {000000000000003F000000000000803F}
         Material.FrontProperties.Diffuse.Color = {000000000000003F000000000000803F}
-        Material.FrontProperties.Emission.Color = {CDCC4C3DCDCC4C3DCDCC4C3D0000803F}
         Direction.Coordinates = {000000000000803F2EBD3BB300000000}
         PitchAngle = 90.000000000000000000
         Scale.Coordinates = {0000803F000000400000803F00000000}
@@ -284,7 +281,6 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
       object glcylndrAxis3: TGLCylinder
         Material.FrontProperties.Ambient.Color = {00000000000000000000803F0000803F}
         Material.FrontProperties.Diffuse.Color = {00000000000000000000803F0000803F}
-        Material.FrontProperties.Emission.Color = {CDCC4C3DCDCC4C3DCDCC4C3D0000803F}
         Scale.Coordinates = {0000803F000020400000803F00000000}
         BottomRadius = 0.029999999329447750
         Height = 1.000000000000000000
@@ -405,6 +401,7 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
         Scale.Coordinates = {3333333F3333333F3333333F00000000}
         TurnAngle = 100.000000000000000000
         Up.Coordinates = {0000803F000000000000000000000000}
+        Visible = False
         Nodes = <
           item
             X = 1.500000000000000000
