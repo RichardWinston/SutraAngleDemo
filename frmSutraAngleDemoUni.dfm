@@ -2,8 +2,8 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
   Left = 331
   Top = 248
   Caption = 'Illustration of Hydraulic Conductivity Angles in XT3D'
-  ClientHeight = 467
-  ClientWidth = 593
+  ClientHeight = 483
+  ClientWidth = 683
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -16,25 +16,24 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
   object GLSceneViewer1: TGLSceneViewer
     Left = 185
     Top = 0
-    Width = 408
-    Height = 467
+    Width = 498
+    Height = 483
     Camera = GLCamera1
     Buffer.BackgroundColor = clWhite
     Buffer.AmbientColor.Color = {9A99193F9A99193F9A99193F0000803F}
-    FieldOfView = 152.456802368164100000
+    FieldOfView = 156.605575561523400000
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 523
-    ExplicitHeight = 537
+    ExplicitHeight = 475
   end
   object Panel1: TPanel
     Left = 0
     Top = 0
     Width = 185
-    Height = 467
+    Height = 483
     Align = alLeft
     TabOrder = 1
-    ExplicitHeight = 537
+    ExplicitHeight = 467
     object Label1: TLabel
       Left = 8
       Top = 8
@@ -207,13 +206,15 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
   object GLScene1: TGLScene
     Left = 264
     Top = 24
+    object GLLightSource1: TGLLightSource
+      ConstAttenuation = 1.000000000000000000
+      Position.Coordinates = {00000000000040C0000080C00000803F}
+      SpotCutOff = 180.000000000000000000
+    end
     object GLDummyCube1: TGLDummyCube
+      RollAngle = 10.000000000000000000
+      Up.Coordinates = {D2D031BE5C1C7C3F0000000000000000}
       CubeSize = 1.000000000000000000
-      object GLLightSource1: TGLLightSource
-        ConstAttenuation = 1.000000000000000000
-        Position.Coordinates = {00000000000040C0000080C00000803F}
-        SpotCutOff = 180.000000000000000000
-      end
       object glcylndrAxis1: TGLCylinder
         Material.FrontProperties.Ambient.Color = {0000803F00000000000000000000803F}
         Material.FrontProperties.Diffuse.Color = {0000803F00000000000000000000803F}
@@ -228,7 +229,712 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
         Material.FrontProperties.Ambient.Color = {CDCC0C3FD7A3F03E295C0F3E0000803F}
         Material.FrontProperties.Diffuse.Color = {EC51383F6666E63ECDCC4C3E0000803F}
         Scale.Coordinates = {000000400000803F9A99993E00000000}
+        Visible = False
         Radius = 0.500000000000000000
+      end
+      object glrvltnsldPartialSphere1: TGLRevolutionSolid
+        Material.FrontProperties.Ambient.Color = {CDCC0C3FD7A3F03E295C0F3E0000803F}
+        Material.FrontProperties.Diffuse.Color = {EC51383F6666E63ECDCC4C3E0000803F}
+        Direction.Coordinates = {0000803F000000800000000000000000}
+        Scale.Coordinates = {0000003F0000803E0000803F00000000}
+        Up.Coordinates = {0000000000000000000080BF00000000}
+        Nodes = <
+          item
+            Y = 1.000000000000000000
+          end
+          item
+            X = 0.086999997496604920
+            Y = 0.995999991893768300
+          end
+          item
+            X = 0.173999994993209800
+            Y = 0.985000014305114700
+          end
+          item
+            X = 0.259000003337860100
+            Y = 0.966000020503997800
+          end
+          item
+            X = 0.342000007629394500
+            Y = 0.939999997615814200
+          end
+          item
+            X = 0.423000007867813100
+            Y = 0.906000018119812000
+          end
+          item
+            X = 0.500000000000000000
+            Y = 0.865999996662139900
+          end
+          item
+            X = 0.574000000953674300
+            Y = 0.819000005722045900
+          end
+          item
+            X = 0.643000006675720200
+            Y = 0.765999972820282000
+          end
+          item
+            X = 0.707000017166137700
+            Y = 0.707000017166137700
+          end
+          item
+            X = 0.765999972820282000
+            Y = 0.643000006675720200
+          end
+          item
+            X = 0.819000005722045900
+            Y = 0.574000000953674300
+          end
+          item
+            X = 0.865999996662139900
+            Y = 0.500000000000000000
+          end
+          item
+            X = 0.906000018119812000
+            Y = 0.423000007867813100
+          end
+          item
+            X = 0.944000005722045900
+            Y = 0.342000007629394500
+          end
+          item
+            X = 0.966000020503997800
+            Y = 0.259000003337860100
+          end
+          item
+            X = 0.985000014305114700
+            Y = 0.173999994993209800
+          end
+          item
+            X = 0.995999991893768300
+            Y = 0.086999997496604920
+          end
+          item
+            X = 1.000000000000000000
+          end
+          item
+          end>
+        Parts = [rspOutside, rspInside, rspStartPolygon, rspStopPolygon]
+        StopAngle = 90.000000000000000000
+        Normals = nsSmooth
+      end
+      object glrvltnsldPartialSphere2: TGLRevolutionSolid
+        Material.BackProperties.Ambient.Color = {0000803F00000000000000000000803F}
+        Material.BackProperties.Diffuse.Color = {0000803F00000000000000000000803F}
+        Material.FrontProperties.Ambient.Color = {0000803F00000000000000000000803F}
+        Material.FrontProperties.Diffuse.Color = {0000803F00000000000000000000803F}
+        Direction.Coordinates = {0000803F000000800000000000000000}
+        Scale.Coordinates = {0000003F0000803E0000803F00000000}
+        Up.Coordinates = {0000000000000000000080BF00000000}
+        Nodes = <
+          item
+            Y = 1.000000000000000000
+          end
+          item
+            X = 0.086999997496604920
+            Y = 0.995999991893768300
+          end
+          item
+            X = 0.173999994993209800
+            Y = 0.985000014305114700
+          end
+          item
+            X = 0.259000003337860100
+            Y = 0.966000020503997800
+          end
+          item
+            X = 0.342000007629394500
+            Y = 0.939999997615814200
+          end
+          item
+            X = 0.423000007867813100
+            Y = 0.906000018119812000
+          end
+          item
+            X = 0.500000000000000000
+            Y = 0.865999996662139900
+          end
+          item
+            X = 0.574000000953674300
+            Y = 0.819000005722045900
+          end
+          item
+            X = 0.643000006675720200
+            Y = 0.765999972820282000
+          end
+          item
+            X = 0.707000017166137700
+            Y = 0.707000017166137700
+          end
+          item
+            X = 0.765999972820282000
+            Y = 0.643000006675720200
+          end
+          item
+            X = 0.819000005722045900
+            Y = 0.574000000953674300
+          end
+          item
+            X = 0.865999996662139900
+            Y = 0.500000000000000000
+          end
+          item
+            X = 0.906000018119812000
+            Y = 0.423000007867813100
+          end
+          item
+            X = 0.944000005722045900
+            Y = 0.342000007629394500
+          end
+          item
+            X = 0.966000020503997800
+            Y = 0.259000003337860100
+          end
+          item
+            X = 0.985000014305114700
+            Y = 0.173999994993209800
+          end
+          item
+            X = 0.995999991893768300
+            Y = 0.086999997496604920
+          end
+          item
+            X = 1.000000000000000000
+          end
+          item
+          end>
+        Parts = [rspOutside, rspInside, rspStartPolygon, rspStopPolygon]
+        StartAngle = 90.000000000000000000
+        StopAngle = 180.000000000000000000
+        Normals = nsSmooth
+      end
+      object glrvltnsldPartialSphere3: TGLRevolutionSolid
+        Material.FrontProperties.Ambient.Color = {00000000000000000000803F0000803F}
+        Material.FrontProperties.Diffuse.Color = {00000000000000000000803F0000803F}
+        Direction.Coordinates = {0000803F000000800000000000000000}
+        Scale.Coordinates = {0000003F0000803E0000803F00000000}
+        Up.Coordinates = {0000000000000000000080BF00000000}
+        Nodes = <
+          item
+            Y = 1.000000000000000000
+          end
+          item
+            X = 0.086999997496604920
+            Y = 0.995999991893768300
+          end
+          item
+            X = 0.173999994993209800
+            Y = 0.985000014305114700
+          end
+          item
+            X = 0.259000003337860100
+            Y = 0.966000020503997800
+          end
+          item
+            X = 0.342000007629394500
+            Y = 0.939999997615814200
+          end
+          item
+            X = 0.423000007867813100
+            Y = 0.906000018119812000
+          end
+          item
+            X = 0.500000000000000000
+            Y = 0.865999996662139900
+          end
+          item
+            X = 0.574000000953674300
+            Y = 0.819000005722045900
+          end
+          item
+            X = 0.643000006675720200
+            Y = 0.765999972820282000
+          end
+          item
+            X = 0.707000017166137700
+            Y = 0.707000017166137700
+          end
+          item
+            X = 0.765999972820282000
+            Y = 0.643000006675720200
+          end
+          item
+            X = 0.819000005722045900
+            Y = 0.574000000953674300
+          end
+          item
+            X = 0.865999996662139900
+            Y = 0.500000000000000000
+          end
+          item
+            X = 0.906000018119812000
+            Y = 0.423000007867813100
+          end
+          item
+            X = 0.944000005722045900
+            Y = 0.342000007629394500
+          end
+          item
+            X = 0.966000020503997800
+            Y = 0.259000003337860100
+          end
+          item
+            X = 0.985000014305114700
+            Y = 0.173999994993209800
+          end
+          item
+            X = 0.995999991893768300
+            Y = 0.086999997496604920
+          end
+          item
+            X = 1.000000000000000000
+          end
+          item
+          end>
+        Parts = [rspOutside, rspInside, rspStartPolygon, rspStopPolygon]
+        StartAngle = 180.000000000000000000
+        StopAngle = 270.000000000000000000
+        Normals = nsSmooth
+      end
+      object glrvltnsldPartialSphere4: TGLRevolutionSolid
+        Material.BackProperties.Ambient.Color = {0000803F00000000000000000000803F}
+        Material.BackProperties.Diffuse.Color = {0000803F00000000000000000000803F}
+        Material.FrontProperties.Ambient.Color = {000000000000003F000000000000803F}
+        Material.FrontProperties.Diffuse.Color = {000000000000003F000000000000803F}
+        Direction.Coordinates = {0000803F000000800000000000000000}
+        Scale.Coordinates = {0000003F0000803E0000803F00000000}
+        Up.Coordinates = {0000000000000000000080BF00000000}
+        Nodes = <
+          item
+            Y = 1.000000000000000000
+          end
+          item
+            X = 0.086999997496604920
+            Y = 0.995999991893768300
+          end
+          item
+            X = 0.173999994993209800
+            Y = 0.985000014305114700
+          end
+          item
+            X = 0.259000003337860100
+            Y = 0.966000020503997800
+          end
+          item
+            X = 0.342000007629394500
+            Y = 0.939999997615814200
+          end
+          item
+            X = 0.423000007867813100
+            Y = 0.906000018119812000
+          end
+          item
+            X = 0.500000000000000000
+            Y = 0.865999996662139900
+          end
+          item
+            X = 0.574000000953674300
+            Y = 0.819000005722045900
+          end
+          item
+            X = 0.643000006675720200
+            Y = 0.765999972820282000
+          end
+          item
+            X = 0.707000017166137700
+            Y = 0.707000017166137700
+          end
+          item
+            X = 0.765999972820282000
+            Y = 0.643000006675720200
+          end
+          item
+            X = 0.819000005722045900
+            Y = 0.574000000953674300
+          end
+          item
+            X = 0.865999996662139900
+            Y = 0.500000000000000000
+          end
+          item
+            X = 0.906000018119812000
+            Y = 0.423000007867813100
+          end
+          item
+            X = 0.944000005722045900
+            Y = 0.342000007629394500
+          end
+          item
+            X = 0.966000020503997800
+            Y = 0.259000003337860100
+          end
+          item
+            X = 0.985000014305114700
+            Y = 0.173999994993209800
+          end
+          item
+            X = 0.995999991893768300
+            Y = 0.086999997496604920
+          end
+          item
+            X = 1.000000000000000000
+          end
+          item
+          end>
+        Parts = [rspOutside, rspInside, rspStartPolygon, rspStopPolygon]
+        StartAngle = 270.000000000000000000
+        Normals = nsSmooth
+      end
+      object glrvltnsldPartialSphere5: TGLRevolutionSolid
+        Material.FrontProperties.Ambient.Color = {00000000000000000000803F0000803F}
+        Material.FrontProperties.Diffuse.Color = {00000000000000000000803F0000803F}
+        Direction.Coordinates = {0000803F000000800000000000000000}
+        Scale.Coordinates = {0000003F0000803E0000803F00000000}
+        Up.Coordinates = {0000000000000000000080BF00000000}
+        Nodes = <
+          item
+            Y = -1.000000000000000000
+          end
+          item
+            X = 0.086999997496604920
+            Y = -0.995999991893768300
+          end
+          item
+            X = 0.173999994993209800
+            Y = -0.985000014305114700
+          end
+          item
+            X = 0.259000003337860100
+            Y = -0.966000020503997800
+          end
+          item
+            X = 0.342000007629394500
+            Y = -0.939999997615814200
+          end
+          item
+            X = 0.423000007867813100
+            Y = -0.906000018119812000
+          end
+          item
+            X = 0.500000000000000000
+            Y = -0.865999996662139900
+          end
+          item
+            X = 0.574000000953674300
+            Y = -0.819000005722045900
+          end
+          item
+            X = 0.643000006675720200
+            Y = -0.765999972820282000
+          end
+          item
+            X = 0.707000017166137700
+            Y = -0.707000017166137700
+          end
+          item
+            X = 0.765999972820282000
+            Y = -0.643000006675720200
+          end
+          item
+            X = 0.819000005722045900
+            Y = -0.574000000953674300
+          end
+          item
+            X = 0.865999996662139900
+            Y = -0.500000000000000000
+          end
+          item
+            X = 0.906000018119812000
+            Y = -0.423000007867813100
+          end
+          item
+            X = 0.944000005722045900
+            Y = -0.342000007629394500
+          end
+          item
+            X = 0.966000020503997800
+            Y = -0.259000003337860100
+          end
+          item
+            X = 0.985000014305114700
+            Y = -0.173999994993209800
+          end
+          item
+            X = 0.995999991893768300
+            Y = -0.086999997496604920
+          end
+          item
+            X = 1.000000000000000000
+          end
+          item
+          end>
+        Parts = [rspOutside, rspInside, rspStartPolygon, rspStopPolygon]
+        StopAngle = 90.000000000000000000
+        Normals = nsSmooth
+      end
+      object glrvltnsldPartialSphere6: TGLRevolutionSolid
+        Material.FrontProperties.Ambient.Color = {000000000000003F000000000000803F}
+        Material.FrontProperties.Diffuse.Color = {000000000000003F000000000000803F}
+        Direction.Coordinates = {0000803F000000800000000000000000}
+        Scale.Coordinates = {0000003F0000803E0000803F00000000}
+        Up.Coordinates = {0000000000000000000080BF00000000}
+        Nodes = <
+          item
+            Y = -1.000000000000000000
+          end
+          item
+            X = 0.086999997496604920
+            Y = -0.995999991893768300
+          end
+          item
+            X = 0.173999994993209800
+            Y = -0.985000014305114700
+          end
+          item
+            X = 0.259000003337860100
+            Y = -0.966000020503997800
+          end
+          item
+            X = 0.342000007629394500
+            Y = -0.939999997615814200
+          end
+          item
+            X = 0.423000007867813100
+            Y = -0.906000018119812000
+          end
+          item
+            X = 0.500000000000000000
+            Y = -0.865999996662139900
+          end
+          item
+            X = 0.574000000953674300
+            Y = -0.819000005722045900
+          end
+          item
+            X = 0.643000006675720200
+            Y = -0.765999972820282000
+          end
+          item
+            X = 0.707000017166137700
+            Y = -0.707000017166137700
+          end
+          item
+            X = 0.765999972820282000
+            Y = -0.643000006675720200
+          end
+          item
+            X = 0.819000005722045900
+            Y = -0.574000000953674300
+          end
+          item
+            X = 0.865999996662139900
+            Y = -0.500000000000000000
+          end
+          item
+            X = 0.906000018119812000
+            Y = -0.423000007867813100
+          end
+          item
+            X = 0.944000005722045900
+            Y = -0.342000007629394500
+          end
+          item
+            X = 0.966000020503997800
+            Y = -0.259000003337860100
+          end
+          item
+            X = 0.985000014305114700
+            Y = -0.173999994993209800
+          end
+          item
+            X = 0.995999991893768300
+            Y = -0.086999997496604920
+          end
+          item
+            X = 1.000000000000000000
+          end
+          item
+          end>
+        Parts = [rspOutside, rspInside, rspStartPolygon, rspStopPolygon]
+        StartAngle = 90.000000000000000000
+        StopAngle = 180.000000000000000000
+        Normals = nsSmooth
+      end
+      object glrvltnsldPartialSphere7: TGLRevolutionSolid
+        Material.FrontProperties.Ambient.Color = {CDCC0C3FD7A3F03E295C0F3E0000803F}
+        Material.FrontProperties.Diffuse.Color = {EC51383F6666E63ECDCC4C3E0000803F}
+        Direction.Coordinates = {0000803F000000800000000000000000}
+        Scale.Coordinates = {0000003F0000803E0000803F00000000}
+        Up.Coordinates = {0000000000000000000080BF00000000}
+        Nodes = <
+          item
+            Y = -1.000000000000000000
+          end
+          item
+            X = 0.086999997496604920
+            Y = -0.995999991893768300
+          end
+          item
+            X = 0.173999994993209800
+            Y = -0.985000014305114700
+          end
+          item
+            X = 0.259000003337860100
+            Y = -0.966000020503997800
+          end
+          item
+            X = 0.342000007629394500
+            Y = -0.939999997615814200
+          end
+          item
+            X = 0.423000007867813100
+            Y = -0.906000018119812000
+          end
+          item
+            X = 0.500000000000000000
+            Y = -0.865999996662139900
+          end
+          item
+            X = 0.574000000953674300
+            Y = -0.819000005722045900
+          end
+          item
+            X = 0.643000006675720200
+            Y = -0.765999972820282000
+          end
+          item
+            X = 0.707000017166137700
+            Y = -0.707000017166137700
+          end
+          item
+            X = 0.765999972820282000
+            Y = -0.643000006675720200
+          end
+          item
+            X = 0.819000005722045900
+            Y = -0.574000000953674300
+          end
+          item
+            X = 0.865999996662139900
+            Y = -0.500000000000000000
+          end
+          item
+            X = 0.906000018119812000
+            Y = -0.423000007867813100
+          end
+          item
+            X = 0.944000005722045900
+            Y = -0.342000007629394500
+          end
+          item
+            X = 0.966000020503997800
+            Y = -0.259000003337860100
+          end
+          item
+            X = 0.985000014305114700
+            Y = -0.173999994993209800
+          end
+          item
+            X = 0.995999991893768300
+            Y = -0.086999997496604920
+          end
+          item
+            X = 1.000000000000000000
+          end
+          item
+          end>
+        Parts = [rspOutside, rspInside, rspStartPolygon, rspStopPolygon]
+        StartAngle = 180.000000000000000000
+        StopAngle = 270.000000000000000000
+        Normals = nsSmooth
+      end
+      object glrvltnsldPartialSphere8: TGLRevolutionSolid
+        Material.FrontProperties.Ambient.Color = {0000803F00000000000000000000803F}
+        Material.FrontProperties.Diffuse.Color = {0000803F00000000000000000000803F}
+        Direction.Coordinates = {0000803F000000800000000000000000}
+        Scale.Coordinates = {0000003F0000803E0000803F00000000}
+        Up.Coordinates = {0000000000000000000080BF00000000}
+        Nodes = <
+          item
+            Y = -1.000000000000000000
+          end
+          item
+            X = 0.086999997496604920
+            Y = -0.995999991893768300
+          end
+          item
+            X = 0.173999994993209800
+            Y = -0.985000014305114700
+          end
+          item
+            X = 0.259000003337860100
+            Y = -0.966000020503997800
+          end
+          item
+            X = 0.342000007629394500
+            Y = -0.939999997615814200
+          end
+          item
+            X = 0.423000007867813100
+            Y = -0.906000018119812000
+          end
+          item
+            X = 0.500000000000000000
+            Y = -0.865999996662139900
+          end
+          item
+            X = 0.574000000953674300
+            Y = -0.819000005722045900
+          end
+          item
+            X = 0.643000006675720200
+            Y = -0.765999972820282000
+          end
+          item
+            X = 0.707000017166137700
+            Y = -0.707000017166137700
+          end
+          item
+            X = 0.765999972820282000
+            Y = -0.643000006675720200
+          end
+          item
+            X = 0.819000005722045900
+            Y = -0.574000000953674300
+          end
+          item
+            X = 0.865999996662139900
+            Y = -0.500000000000000000
+          end
+          item
+            X = 0.906000018119812000
+            Y = -0.423000007867813100
+          end
+          item
+            X = 0.944000005722045900
+            Y = -0.342000007629394500
+          end
+          item
+            X = 0.966000020503997800
+            Y = -0.259000003337860100
+          end
+          item
+            X = 0.985000014305114700
+            Y = -0.173999994993209800
+          end
+          item
+            X = 0.995999991893768300
+            Y = -0.086999997496604920
+          end
+          item
+            X = 1.000000000000000000
+          end
+          item
+          end>
+        Parts = [rspOutside, rspInside, rspStartPolygon, rspStopPolygon]
+        StartAngle = 270.000000000000000000
+        Normals = nsSmooth
       end
       object GLArrowLine1: TGLArrowLine
         Direction.Coordinates = {000000000000803F0000000000000000}
@@ -268,6 +974,8 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
         BottomArrowHeadRadius = 0.200000002980232200
       end
       object glcylndrAxis2: TGLCylinder
+        Material.BackProperties.Ambient.Color = {000000000000003F000000000000803F}
+        Material.BackProperties.Diffuse.Color = {000000000000003F000000000000803F}
         Material.FrontProperties.Ambient.Color = {000000000000003F000000000000803F}
         Material.FrontProperties.Diffuse.Color = {000000000000003F000000000000803F}
         Direction.Coordinates = {000000000000803F2EBD3BB300000000}
@@ -457,6 +1165,11 @@ object frmSutraAngleDemo: TfrmSutraAngleDemo
       FocalLength = 50.000000000000000000
       TargetObject = GLSphere1
       Position.Coordinates = {00000000000040C0000080BF0000803F}
+    end
+    object glLightSource2: TGLLightSource
+      ConstAttenuation = 2.000000000000000000
+      Position.Coordinates = {00000000000040C0000080400000803F}
+      SpotCutOff = 180.000000000000000000
     end
   end
   object AsyncTimer1: TGLAsyncTimer

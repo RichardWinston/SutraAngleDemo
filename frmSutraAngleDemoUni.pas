@@ -47,6 +47,15 @@ type
     glConeArrowhead2: TGLCone;
     glRotationSolidCurvedArrow3: TGLRevolutionSolid;
     glConeArrowhead3: TGLCone;
+    glrvltnsldPartialSphere1: TGLRevolutionSolid;
+    glrvltnsldPartialSphere2: TGLRevolutionSolid;
+    glrvltnsldPartialSphere3: TGLRevolutionSolid;
+    glrvltnsldPartialSphere4: TGLRevolutionSolid;
+    glrvltnsldPartialSphere5: TGLRevolutionSolid;
+    glrvltnsldPartialSphere6: TGLRevolutionSolid;
+    glrvltnsldPartialSphere7: TGLRevolutionSolid;
+    glrvltnsldPartialSphere8: TGLRevolutionSolid;
+    glLightSource2: TGLLightSource;
     procedure seAngle1Change(Sender: TObject);
     procedure btnAnimateClick(Sender: TObject);
     procedure AsyncTimer1Timer(Sender: TObject);
@@ -62,6 +71,7 @@ type
     procedure SetAngle2(const Value: integer);
     procedure SetAngle3(const Value: integer);
     procedure Restore;
+    procedure RestoreUpAndDirection;
   private
     property Angle1: integer read FAngle1 write SetAngle1;
     property Angle2: integer read FAngle2 write SetAngle2;
@@ -80,16 +90,24 @@ uses GLVectorGeometry;
 
 {$R *.dfm}
 
+const
+  DummyCubeStartAngle = 0;
+
 procedure TfrmSutraAngleDemo.Restore;
-var
-  Up: TAffineVector;
-  Direction: TAffineVector;
 begin
   Angle1 := 0;
   Angle2 := 0;
   Angle3 := 0;
-  Up.V[0] := 0;
-  Up.V[1] := 1;
+  RestoreUpAndDirection;
+end;
+
+procedure TfrmSutraAngleDemo.RestoreUpAndDirection;
+var
+  Up: TAffineVector;
+  Direction: TAffineVector;
+begin
+  Up.V[0] := -0.1736481;
+  Up.V[1] := 0.9848077;
   Up.V[2] := 0;
   Direction.V[0] := 0;
   Direction.V[1] := 0;
@@ -202,7 +220,7 @@ end;
 procedure TfrmSutraAngleDemo.SetAngle1(const Value: integer);
 begin
   FAngle1 := Value;
-  GLDummyCube1.RollAngle := -FAngle1;
+  GLDummyCube1.RollAngle := -FAngle1 + DummyCubeStartAngle;
 end;
 
 procedure TfrmSutraAngleDemo.SetAngle2(const Value: integer);
